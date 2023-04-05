@@ -1,18 +1,20 @@
+import { Route, Switch } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
-import Banner from "./components/Banner";
-import ProductsList from "./components/ProductsList";
-import Search from "./components/Search";
-import Support from "./components/Support";
 import Footer from "./components/Footer";
+import Landing from "./components/Landing";
+import Products from "./components/Products";
+import AboutUs from "./components/AboutUs";
 
 const App = () => {
   return (
     <div>
       <Navbar />
-      <Banner />
-      <ProductsList />
-      <Search />
-      <Support />
+      <Switch>
+        <Route path="/products" component={Products} />
+        <Route path="/aboutus" component={AboutUs} />
+        <Route path="/" component={Landing} />
+      </Switch>
       <Footer />
     </div>
   );
