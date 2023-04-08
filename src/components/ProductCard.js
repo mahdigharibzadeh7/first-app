@@ -18,12 +18,16 @@ const ProductCard = ({ image, name, price }) => {
   };
 
   return (
-    <div className="rounded-xl bg-slate-300 shadow-2xl text-slate-600">
+    <div className="rounded-xl bg-slate-300 shadow-2xl text-slate-600 w-1/4">
       <div className="flex justify-center mb-7">
-        <img className="w-72 h-60" src={image} alt="" />
+        <img className="w-full h-60" src={image} alt="" />
       </div>
-      <p className="ml-10 mb-3 font-bold">{name}</p>
-      <div className={`border-none rounded-lg bg-green-700 px-4 py-2 ml-10 mb-5 w-fit text-white ${counter ? '':'opacity-50'}`}>
+      <p className="ml-10 mb-3 font-bold max-h-5 overflow-hidden">{name}</p>
+      <div
+        className={`border-none rounded-lg bg-green-700 px-4 py-2 ml-10 mb-5 w-fit text-white ${
+          counter ? "" : "opacity-50"
+        }`}
+      >
         {counter ? counter * price : price}$
       </div>
       <div className="flex items-center border border-b-0 border-x-0 border-slate-400 py-5 pl-8 child:m-1 text-2xl">

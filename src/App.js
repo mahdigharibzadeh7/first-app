@@ -1,4 +1,4 @@
-import { Route, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -10,11 +10,11 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <Switch>
-        <Route path="/products" component={Products} />
-        <Route path="/aboutus" component={AboutUs} />
-        <Route path="/" component={Landing} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/aboutus" element={<AboutUs />} />
+      </Routes>
       <Footer />
     </div>
   );

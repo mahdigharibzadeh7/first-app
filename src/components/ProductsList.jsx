@@ -14,7 +14,7 @@ const ProductsList = () => {
     { id: 4, image: s21, name: "S21 Ultra", price: "790" },
   ];
   return (
-    <div className="flex justify-center gap-20 mt-5">
+    <div className="flex justify-center gap-10 mx-5 mt-5">
       {phones.map((item) => {
         return (
           <ProductCard
